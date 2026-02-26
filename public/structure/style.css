@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+/* --- CONFIGURATION GLOBALE --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
 
 :root {
-  --logo-green: #c1dbbe;     /* Votre couleur de logo */
-  --dark-green: #4a5d48;     /* Version foncée pour le contraste */
-  --deep-brown: #5d4037;     /* Marron foncé pour les titres (lisible) */
-  --text-main: #2c2c2c;      /* Presque noir pour le corps de texte */
-  --bg-soft: #f9fbf9;        /* Fond très légèrement teinté */
+  --logo-green: #c1dbbe;     /* Le vert de votre logo */
+  --dark-green: #3e503c;     /* Vert très sombre pour le contraste du nom */
+  --deep-brown: #4e342e;     /* Marron foncé pour les titres (très lisible) */
+  --text-main: #2d2d2d;      /* Anthracite pour le corps de texte */
+  --bg-soft: #fcfdfc;        /* Fond de page très légèrement teinté */
   --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -17,83 +22,125 @@ body {
   background-color: var(--bg-soft);
 }
 
-/* --- Header & MyName (Plus compact et contrasté) --- */
+/* --- EN-TÊTE (Bandeau du haut) --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 5%; /* Réduit la hauteur du bandeau */
+  padding: 0.7rem 5%;
   background: var(--white);
-  border-bottom: 2px solid var(--logo-green);
+  border-bottom: 3px solid var(--logo-green);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 .myname {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--dark-green); /* Contraste renforcé ici */
-  letter-spacing: -0.5px;
+  color: var(--dark-green); /* Contraste renforcé */
 }
 
 .navbar a {
   text-decoration: none;
   color: var(--text-main);
-  margin-left: 20px;
+  margin-left: 25px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
   color: var(--dark-green);
 }
 
-/* --- Layout (Proportions ajustées) --- */
+/* --- MISE EN PAGE (Layout) --- */
 .row {
   display: flex;
-  max-width: 1300px; /* Plus large pour aérer */
+  max-width: 1300px;
   margin: 0 auto;
   gap: 40px;
-  padding: 2rem 20px;
+  padding: 3rem 20px;
 }
 
+/* Bande gauche réduite à 20% */
 .left {
-  flex: 0 0 20%; /* Largeur fixe à 20% seulement */
-  background-color: var(--white);
-  padding: 1.5rem;
-  border-radius: 12px;
+  flex: 0 0 20%; 
   height: fit-content;
-  border: 1px solid #eee;
 }
 
+/* Corps de texte principal (80%) */
 .right {
-  flex: 1; /* Prend tout l'espace restant (80% environ) */
+  flex: 1;
 }
 
-/* --- Typographie --- */
+/* --- TYPOGRAPHIE & TITRES --- */
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  color: var(--deep-brown); /* Marron foncé pour la lisibilité */
+  font-size: 2.5rem;
+  color: var(--deep-brown); /* Marron foncé pour la visibilité */
   margin-top: 0;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .liltitle {
   font-weight: 600;
   font-size: 1.3rem;
   color: var(--dark-green);
-  margin-top: 2rem;
-  border-left: 4px solid var(--logo-green);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
   padding-left: 15px;
+  border-left: 4px solid var(--logo-green); /* Rappel élégant du logo */
 }
 
-/* --- Composants --- */
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* --- IMAGES --- */
+.centerimage {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 2.5rem auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+}
+
+.littleimageleft {
+  width: 200px;
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  border-radius: 10px;
+  border: 2px solid var(--logo-green);
+}
+
+.littleimageright {
+  width: 200px;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--logo-green);
+}
+
+/* Nettoyage des floats pour éviter les bugs de mise en page */
+.right::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- MENU LATÉRAL (Navigation secondaire) --- */
 .navmenu {
-  list-style: none;
-  padding: 0;
+  background: var(--white);
+  border: 1px solid #eef2ee;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 
 .navmenu a {
@@ -103,8 +150,7 @@ header {
   text-decoration: none;
   border-radius: 8px;
   margin-bottom: 5px;
-  transition: all 0.3s;
-  background: #f4f8f4; /* Rappel très léger du vert */
+  transition: all 0.3s ease;
 }
 
 .navmenu a:hover {
@@ -112,16 +158,34 @@ header {
   color: var(--dark-green);
 }
 
-.centerimage {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-/* --- Responsive --- */
+/* --- RESPONSIVE (Tablettes et Mobiles) --- */
 @media (max-width: 900px) {
-  .row { flex-direction: column; }
-  .left { flex: 1; width: 100%; box-sizing: border-box; }
-  header { flex-direction: column; gap: 10px; }
+  .row {
+    flex-direction: column;
+    padding: 1.5rem 20px;
+  }
+  
+  .left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    margin-top: 15px;
+  }
+  
+  .navbar a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
 }
