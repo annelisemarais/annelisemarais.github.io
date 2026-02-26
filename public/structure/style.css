@@ -1,63 +1,138 @@
-body {text-align: :center;
-margin: 5;}
+/* Import d'une police douce depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital@0;1&display=swap');
 
-.myname {background-color: #A0C8D6;
-font-size: 20px ;
-text-align: center}
-
-.navbar {background-color: black;
-overflow : hidden; width: 70%; float: right; text-align: right;
+:root {
+  --primary-color: #A0C8D6; /* Votre bleu, mais adouci */
+  --soft-sage: #e8f0f2;
+  --text-dark: #333d42;
+  --white: #ffffff;
+  --accent: #d9b99b; /* Une touche terreuse pour rassurer */
 }
-.navbar a {float : center ; color : white; padding: 20px 20px ; text-decoration: none; display: inline-block;}
-.navbar a:hover {background-color: blue;}
-.navbarleft {float: left; color : white; padding: 20px 20px ; text-decoration: none; display: inline-block;} }
 
-a {text-decoration: none;}
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+}
 
+/* --- Navigation --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.myname {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-dark);
+  margin-left: 20px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Mise en page (Layout) --- */
 .row {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 20px;
 }
 
 .left {
-  width: 28%;
-  background-color: #A0C8D6 ;
-  padding-left:1%;
-  padding-right: 1%;
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--soft-sage);
+  padding: 2rem;
+  border-radius: 15px;
 }
 
 .right {
-  width: 68%;
-  padding-left:1%;
-  padding-right: 1%;
+  flex: 2;
+  min-width: 300px;
 }
 
+/* --- Titres --- */
+h1, .title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.liltitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-top: 1.5rem;
+}
+
+/* --- Images --- */
 .centerimage {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.littleimageleft {
-    width: 20%;
-    float: left;
-    margin-right:1em;
+.littleimageleft, .littleimageright {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-.littleimageright {
-    width: 20%;
-    float: right;
-    margin-left:1em;
+.littleimageleft { float: left; margin-right: 1.5rem; }
+.littleimageright { float: right; margin-left: 1.5rem; }
+
+/* --- Menu latéral / Boutique / Liens --- */
+.navmenu {
+  background: var(--white);
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-
-
-.title {font-weight: bold; text-indent: 10%; font-size: 18pt; margin-top:  5em}
-.liltitle {font-weight: bold; text-indent: 15%; font-size: 15pt}
-
-.navmenu {background-color: #A0C8D6;
-overflow : hidden; width: 30%; float: center; text-align: center; border: 2px solid black;
+.navmenu a {
+  display: block;
+  padding: 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
 }
-.navmenu a {float : center ; color : black; padding: 20px 20px ; text-decoration: none; display: block;}
-.navmenu a:hover {background-color: blue;}
+
+.navmenu a:hover {
+  background-color: var(--soft-sage);
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  header { flex-direction: column; text-align: center; }
+  .navbar { margin-top: 1rem; }
+  .navbar a { margin: 0 10px; font-size: 0.9rem; }
+  .row { flex-direction: column-reverse; }
+}
