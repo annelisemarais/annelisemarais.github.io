@@ -55,6 +55,56 @@ header {
   color: var(--dark-green);
 }
 
+/* ===== SOMMAIRE ===== */
+
+.toc {
+  background: #f8fbf9;
+  border: 1px solid #e3efe8;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.toc-list,
+.toc-sub {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* liens principaux */
+
+.toc-list > li {
+  margin: 6px 0;
+}
+
+/* sous-niveau */
+
+.toc-sub {
+  padding-left: 18px;
+  margin-top: 4px;
+}
+
+.toc-sub li {
+  margin: 4px 0;
+  font-size: 0.95em;
+}
+
+/* liens */
+
+.toc a {
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+/* hover élégant */
+
+.toc a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
 /* --- MISE EN PAGE (Layout) --- */
 .row {
   display: flex;
@@ -147,6 +197,48 @@ p {
   clear: both;
 }
 
+/* ===== Bouton retour en haut ===== */
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--dark-green);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  #backToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
 /* --- MENU LATÉRAL (Navigation secondaire) --- */
 .navmenu {
   background: var(--white);
@@ -202,5 +294,6 @@ p {
     font-size: 2rem;
   }
 }
+
 
 
