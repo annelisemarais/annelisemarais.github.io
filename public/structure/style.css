@@ -78,7 +78,7 @@ header {
 /* --- TYPOGRAPHIE & TITRES --- */
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   color: var(--deep-brown); /* Marron foncé pour la visibilité */
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -202,4 +202,5 @@ p {
     font-size: 2rem;
   }
 }
+
 
