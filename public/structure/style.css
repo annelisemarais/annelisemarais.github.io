@@ -86,13 +86,26 @@ header {
 }
 
 .liltitle {
-  font-weight: 600;
+  font-family: 'Playfair Display', serif; /* On passe sur la police du gros titre */
   font-size: 1.3rem;
-  color: var(--dark-green);
+  color: var(--deep-brown);              /* On passe au marron foncé */
+  font-weight: 700;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
+  line-height: 1.3;
+  /* On retire la bordure verte ici */
+  border-left: none; 
+  padding-left: 0;
+}
+
+.greentitle {
+  font-weight: 600;
+  font-size: 1.1rem; /* Un peu plus petit pour la hiérarchie */
+  color: var(--dark-green);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   padding-left: 15px;
-  border-left: 4px solid var(--logo-green); /* Rappel élégant du logo */
+  border-left: 4px solid var(--logo-green);
 }
 
 p {
@@ -189,3 +202,4 @@ p {
     font-size: 2rem;
   }
 }
+
