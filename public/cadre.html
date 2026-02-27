@@ -305,7 +305,30 @@ l’expérience, tout en garantissant le bien-être de l’animal et du patient.
     </main>
 
 </div>
+    
+<button id="backToTop" aria-label="Retour en haut">↑</button>
+    
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
 </body>
 </html>
+
 
 
