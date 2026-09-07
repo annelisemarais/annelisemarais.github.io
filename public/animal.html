@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs & Modalités - Anne-Lise Marais</title>
+    
+    <link rel="stylesheet" href="../public/structure/style.css"/>
+</head>
+
+<body>
+
+<header>
+    <div class="myname">
+        Anne-Lise Marais <br>
+        <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-main);">
+            Psychologue • Docteur en psychologie
+        </span>
+    </div>
+
+    <nav class="navbar">
+        <a href="../index.html">Accueil</a>
+        <a href="https://docorga.com/praticien/687e3df79a0ac8bd1f83b82c" target="_blank" rel="noopener noreferrer" style="color: var(--dark-green); font-weight: bold;">Prendre RDV</a>
+        <a href="cadre.html">En savoir plus</a>
+        <a href="tarifs.html" class="active">Tarifs</a>
+        <a href="Resume_fr.html">CV</a>
+        <a href="https://scholar.google.com/citations?user=SAnBcYsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications</a>
+        <a href="Mediation_fr.html">Vulgarisation</a>
+        <a href="Teaching_fr.html">Enseignement</a>
+    </nav>
+</header>
+
+<div class="row">
+    
+    <aside class="left">
+        <img src="../public/image/researchprofilepicture.png.jpg" alt="Photo d'Anne-Lise Marais" class="centerimage" style="width: 100%; border: 2px solid var(--logo-green);"/>
+        
+        <div style="margin-top: 20px;">
+            <p class="liltitle" style="border-left: none; padding-left: 0; margin-top: 0;">Coordonnées</p>
+            <p>Cabinet Oberthur d'esprit<br>
+            1 rue Raoul Ponchon<br>
+            35 000 Rennes<br>
+            1er étage à droite</p>
+            
+            <p class="liltitle" style="border-left: none; padding-left: 0;">Horaires</p>
+            <p>Lundi : 10h-18h<br>
+            Mercredi : 10h-18h30<br>
+            Jeudi : 10h-18h 🐶</p>
+            
+            <p class="liltitle" style="border-left: none; padding-left: 0; margin-top: 0;">E-mail</p>
+            <p>almarais.psy@gmail.com</p>
+        </div>
+    </aside>
+
+    <main class="right">
+
+        <h1 class="title" style="text-align: center; font-size: 2.8rem;">Médiation animale</h1>
+
+  
+        <h2 class="title" style="margin-top: 2.5rem;">Présentation de mon chien</h2>
+        
+   
+    </main>
+
+</div>
+
+<footer>
+    <div class="footer-container">
+        
+        <div class="footer-column">
+            <h3>Mentions Légales</h3>
+            <p>
+                Éditeur du site : Anne-Lise Marais<br>
+                Statut : Psychologue libérale<br>
+                SIRET : 94202301100011<br>
+                N° RPPS : 10008619792<br>
+                Adresse : 1 rue Raoul Ponchon, 35000 Rennes<br>
+                Hébergeur : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Médiation de la consommation</h3>
+            <p>
+                Conformément à l'article L.611-4 du Code de la consommation, les prestations de soin dispensées par un psychologue ne relèvent pas du dispositif de médiation de la consommation. (<a href="https://psychologues.org/commission-exercice-liberal/le-psychologue-doit-il-adherer-a-un-dispositif-de-mediation-de-la-consommation/" target="_blank" rel="noopener noreferrer">source SNP</a>)
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Données personnelles & RGPD</h3>
+            <p>
+                <strong>Absence de traçage :</strong> Ce site n'utilise aucun cookie de suivi.<br>
+                <strong>Prise de rendez-vous :</strong> Assurée par la plateforme externe Docorga.<br>
+                <strong>Contact :</strong> <a href="mailto:almarais.psy@gmail.com">almarais.psy@gmail.com</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2026 Anne-Lise Marais — Tous droits réservés.
+    </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut">↑</button>
+    
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+</body>
+</html>
