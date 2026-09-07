@@ -40,7 +40,7 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--dark-green); /* Contraste renforcé */
+  color: var(--dark-green);
 }
 
 .navbar a {
@@ -72,13 +72,9 @@ header {
   margin: 0;
 }
 
-/* liens principaux */
-
 .toc-list > li {
   margin: 6px 0;
 }
-
-/* sous-niveau */
 
 .toc-sub {
   padding-left: 18px;
@@ -90,15 +86,11 @@ header {
   font-size: 0.95em;
 }
 
-/* liens */
-
 .toc a {
   text-decoration: none;
   color: var(--text-main);
   transition: all 0.2s ease;
 }
-
-/* hover élégant */
 
 .toc a:hover {
   color: var(--dark-green);
@@ -114,13 +106,11 @@ header {
   padding: 3rem 20px;
 }
 
-/* Bande gauche réduite à 20% */
 .left {
   flex: 0 0 20%; 
   height: fit-content;
 }
 
-/* Corps de texte principal (80%) */
 .right {
   flex: 1;
 }
@@ -129,28 +119,27 @@ header {
 .title {
   font-family: 'Playfair Display', serif;
   font-size: 1.9rem;
-  color: var(--deep-brown); /* Marron foncé pour la visibilité */
+  color: var(--deep-brown);
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .liltitle {
-  font-family: 'Playfair Display', serif; /* On passe sur la police du gros titre */
+  font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: var(--deep-brown);              /* On passe au marron foncé */
+  color: var(--deep-brown);
   font-weight: 700;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   line-height: 1.3;
-  /* On retire la bordure verte ici */
   border-left: none; 
   padding-left: 0;
 }
 
 .greentitle {
   font-weight: 600;
-  font-size: 1.1rem; /* Un peu plus petit pour la hiérarchie */
+  font-size: 1.1rem;
   color: var(--dark-green);
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -190,7 +179,6 @@ p {
   border: 2px solid var(--logo-green);
 }
 
-/* Nettoyage des floats pour éviter les bugs de mise en page */
 .right::after {
   content: "";
   display: table;
@@ -228,17 +216,6 @@ p {
   visibility: visible;
 }
 
-/* Mobile */
-
-@media (max-width: 768px) {
-  #backToTop {
-    bottom: 20px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
-  }
-}
-
 /* --- MENU LATÉRAL (Navigation secondaire) --- */
 .navmenu {
   background: var(--white);
@@ -261,6 +238,55 @@ p {
 .navmenu a:hover {
   background-color: var(--logo-green);
   color: var(--dark-green);
+}
+
+/* --- PIED DE PAGE (Footer) --- */
+footer {
+  margin: 60px auto 20px auto;
+  max-width: 1300px;
+  padding: 20px 20px 0 20px;
+  border-top: 1px solid #e3efe8;
+  font-size: 0.72rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  text-align: left;
+}
+
+.footer-column h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--dark-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-column p {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #666666;
+}
+
+.footer-column a {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed #eef2ee;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #888888;
 }
 
 /* --- RESPONSIVE (Tablettes et Mobiles) --- */
@@ -293,7 +319,15 @@ p {
   .title {
     font-size: 2rem;
   }
+
+  #backToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
+  footer {
+    padding: 20px 15px 0 15px;
+  }
 }
-
-
-
