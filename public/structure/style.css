@@ -331,3 +331,47 @@ footer {
     padding: 20px 15px 0 15px;
   }
 }
+
+/* --- ENCADRÉ ACTUALITÉS / MIS EN AVANT --- */
+.actualites-box {
+  background-color: #f7faf7; /* Fond très légèrement vert/crème */
+  border: 1px solid var(--logo-green); /* Bordure couleur logo */
+  border-left: 5px solid var(--dark-green); /* Accent plus épais sur le côté gauche */
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 15px rgba(62, 80, 60, 0.05); /* Ombre très douce */
+}
+
+.actualites-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.actualites-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--dark-green);
+  margin: 0;
+}
+
+.actualites-date {
+  font-size: 0.8rem;
+  color: #666666;
+  font-style: italic;
+  background-color: var(--white);
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.actualites-box p {
+  font-size: 0.98rem;
+  margin-bottom: 0.8rem;
+}
+
+.actualites-box p:last-child {
+  margin-bottom: 0;
+}
